@@ -1,20 +1,29 @@
 import styled from 'styled-components';
+import Link from 'next/link';
+import styles from './navbar.module.css'//styling for the navbar div
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import {useState} from 'react'
 
-//styling for the navbar div
-const Div = styled.div`
-    background-color: rgba(40,40,40,0.3);
-    padding: 2%;
-`
-const Button = styled.a`
-    background-colour: teal;
-    color: blue;
-    padding: 1rem 2rem;
-`
+function showMenu(){
+}
+
+function Nav(){
+  return(
+    <div className={styles.links}>
+      <Link className={styles.link} href='/'><a>Home</a></Link>
+      <Link className={styles.link} href='/projects'><a>Projects</a></Link>
+      <Link className={styles.link} href='/services'><a>Services</a></Link>
+      <Link className={styles.link} href='/contacts'><a>Contacts</a></Link>
+    </div>
+  )
+}
 
 export default function Navbar(){
     return(
-        <Div>
-            <Button>Clicker</Button> 
-        </Div>
+      <div className={styles.container}>
+            <button className={styles.burger} onClick={showMenu}> <FontAwesomeIcon icon={faCoffee}/></button>
+            <Nav />
+        </div>
     )
 }
