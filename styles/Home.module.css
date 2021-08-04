@@ -8,9 +8,43 @@
   height: 100vh;
 }
 
-@media (max-width: 600px) {
+.Home{
+  background-color: rgba(1, 102, 102, 0.1);
+  display: grid;
+}
+
+.cta{
+  text-align: left;
+  color: white;
+  font-size: 120%;
+  font-weight: 300;
+  word-spacing: 12px;;
+  padding: 1% 10vw;
+}
+.title{
+  color: white;
+  text-align: center;
+  font-family: var(--title-font)
+}
+
+.link{
+  width: 80vw;
+  margin: 2% 10vw;
+  padding: 2% 5vw;
+  background-color: darkcyan;
+  color: white;
+}
+
+@media (min-width: 320px) {
   .grid {
     width: 100%;
     flex-direction: column;
   }
+  .Home{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 10% 40% 50%;
+  }
+
+
 }

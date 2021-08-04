@@ -1,10 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); /*monsterrat font */
+@import url('https://fonts.googleapis.com/css2?family=Exo&family=Montserrat&display=swap'); /*monsterrat & exo font */
 
+:root {
+  --wine: #611926ff;
+  --light-gray: #d0ccd0ff;
+  --ghost-white: #fbfcffff;
+  --blue-sapphire: #1c6e8cff;
+  --charcoal: #274156ff;
+  --body-font: 'Exo';
+  --title-font: 'Montserrat';
+}
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Montserrat', monospace;
+  font-family: var(--body-font);
   scroll-behavior: smooth;
 }
 
